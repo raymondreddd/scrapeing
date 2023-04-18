@@ -1,0 +1,21 @@
+q1)what is the differnce between $$,  evaluate, and $eval function
+
+In Puppeteer, $$(selector) returns an array of all the matching elements for a given CSS selector. This is similar to using document.querySelectorAll(selector) in the browser's console.
+
+The $eval(selector, pageFunction) function is used to evaluate a function on the first element matching the given CSS selector. The function takes the element as its argument, and it returns the result of the evaluation.
+
+The evaluate(pageFunction, ...args) function, on the other hand, is used to evaluate a function in the context of the page. It can be used to execute arbitrary JavaScript code on the page and return the result to the Node.js environment. The first argument to evaluate is a function that will be evaluated in the page's context, and any additional arguments are passed to that function as its parameters.
+
+In general, $$(selector) is used to get an array of matching elements, $eval(selector, pageFunction) is used to get a single element and perform some action on it, and evaluate(pageFunction, ...args) is used to execute arbitrary code in the page's context.
+
+
+
+
+
+
+
+--------------
+
+Yes, you can use Promise.all to execute multiple asynchronous functions in parallel and wait for all of them to complete before proceeding further. In fact, using Promise.all can often result in better performance compared to using a for loop to iterate over an array of asynchronous functions and awaiting each one sequentially.
+
+In the context of web scraping with Puppeteer, using Promise.all can be particularly useful when you need to extract data from multiple pages or elements on a page simultaneously. By doing so, you can reduce the overall time it takes to scrape the data and improve the responsiveness of your scraper.
